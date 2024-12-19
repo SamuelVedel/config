@@ -14,13 +14,13 @@ PS1='[\u@\h \W]\$ '
 # enable programmable completion features (you don't need to enable
 # this, if it's already enabled in /etc/bash.bashrc and /etc/profile
 # sources /etc/bash.bashrc).
-if ! shopt -oq posix; then
-  if [ -f /usr/share/bash-completion/bash_completion ]; then
-    . /usr/share/bash-completion/bash_completion
-  elif [ -f /etc/bash_completion ]; then
-    . /etc/bash_completion
-  fi
-fi
+# if ! shopt -oq posix; then
+#   if [ -f /usr/share/bash-completion/bash_completion ]; then
+#     . /usr/share/bash-completion/bash_completion
+#   elif [ -f /etc/bash_completion ]; then
+#     . /etc/bash_completion
+#   fi
+# fi
 
 alias ls='ls --color=auto --group-directories-first'
 alias cls='clear'
@@ -37,6 +37,10 @@ alias tree='tree -C --dirsfirst'
 alias please='sudo'
 alias histoff='set +o history'
 alias histon='set -o history'
+alias hexedit='hexedit --color'
+alias emacs='emacs -nw'
+alias nulmacs='/usr/bin/emacs'
+alias sumacs='sudo emacs -nw -u saam'
 
 export PATH=$PATH:~/mexec
 
@@ -66,3 +70,5 @@ $HOME/javalibs/lwjgl/lwjgl-stb.jar:$HOME/javalibs/lwjgl/lwjgl-stb-natives-linux.
 $HOME/javalibs/lwjgl/lwjgl-assimp.jar:$HOME/javalibs/lwjgl/lwjgl-assimp-natives-linux.jar:\
 $HOME/javalibs/imgui/imgui-binding-1.86.11.jar:$HOME/javalibs/imgui/imgui-lwjgl3-1.86.11.jar:\
 $HOME/javalibs/lwjgl/lwjgl-openal.jar:$HOME/javalibs/lwjgl/lwjgl-openal-natives-linux.jar
+
+#echo Don't worry about tests, Chuck Norris's test cases cover your code too.
