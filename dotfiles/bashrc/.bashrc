@@ -41,8 +41,14 @@ alias hexedit='hexedit --color'
 alias emacs='emacs -nw'
 alias nulmacs='/usr/bin/emacs'
 alias sumacs='sudo emacs -nw -u saam'
+alias cacafire='DISPLAY= cacafire'
+alias cacademo='DISPLAY= cacademo'
+alias diff='diff --color=auto'
+
+eval "$(zoxide init --cmd cd bash)"
 
 export PATH=$PATH:~/mexec
+#export PATH=/lib/jvm/java-8-openjdk/bin/:$PATH
 
 function show_git_branch() {
 	branch=$(git branch 2>/dev/null | grep '^*' | colrm 1 2)
