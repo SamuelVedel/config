@@ -47,8 +47,7 @@ alias diff='diff --color=auto'
 
 eval "$(zoxide init --cmd cd bash)"
 
-export PATH=$PATH:~/mexec
-#export PATH=/lib/jvm/java-8-openjdk/bin/:$PATH
+export EDITOR='emacs -nw'
 
 function show_git_branch() {
 	branch=$(git branch 2>/dev/null | grep '^*' | colrm 1 2)
@@ -62,6 +61,9 @@ function show_git_branch() {
 USER_COLOR="\033[01;38;2;153;102;255m"
 PATH_COLOR="\033[01;38;2;127;179;213m"
 export PS1="\[$USER_COLOR\]\u@\h\[\033[00m\]:\[$PATH_COLOR\]\w\[\033[01;91m\]\$(show_git_branch)\[\033[00m\]\$ "
+
+# To be able to scroll in less while using tmux
+export LESS='--mouse --wheel-lines=1'
 
 # to avoid history duplication
 export HISTCONTROL=ignoreboth:erasedups
