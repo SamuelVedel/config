@@ -44,6 +44,9 @@ alias sumacs='sudo emacs -nw -u saam'
 alias cacafire='DISPLAY= cacafire'
 alias cacademo='DISPLAY= cacademo'
 alias diff='diff --color=auto'
+alias jajar='java -jar'n'
+alias less='less --mouse --wheel-lines=1'
+alias bat='bat --pager="less -R --mouse --wheel-lines=1"'
 
 eval "$(zoxide init --cmd cd bash)"
 
@@ -63,7 +66,7 @@ PATH_COLOR="\033[01;38;2;127;179;213m"
 export PS1="\[$USER_COLOR\]\u@\h\[\033[00m\]:\[$PATH_COLOR\]\w\[\033[01;91m\]\$(show_git_branch)\[\033[00m\]\$ "
 
 # To be able to scroll in less while using tmux
-export LESS='--mouse --wheel-lines=1'
+#export LESS='--mouse --wheel-lines=1'
 
 # to avoid history duplication
 export HISTCONTROL=ignoreboth:erasedups
@@ -78,5 +81,8 @@ $HOME/javalibs/lwjgl/lwjgl-stb.jar:$HOME/javalibs/lwjgl/lwjgl-stb-natives-linux.
 $HOME/javalibs/lwjgl/lwjgl-assimp.jar:$HOME/javalibs/lwjgl/lwjgl-assimp-natives-linux.jar:\
 $HOME/javalibs/imgui/imgui-binding-1.86.11.jar:$HOME/javalibs/imgui/imgui-lwjgl3-1.86.11.jar:\
 $HOME/javalibs/lwjgl/lwjgl-openal.jar:$HOME/javalibs/lwjgl/lwjgl-openal-natives-linux.jar
+
+export MANPAGER='less -R --mouse --wheel-lines=1'
+export BAT_PAGER='less -R --mouse --wheel-lines=1'
 
 #echo Don't worry about tests, Chuck Norris's test cases cover your code too.
